@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
             }).catch((err) => {
                 console.log("err", err);
             })
-        const socket = io('ws://localhost:4000', { transports: ["websocket"] })
+        const socket = io('wss://backend-nodejs-mongodb.herokuapp.com', { transports: ["websocket"] })
         setSocket(socket);
         return () => socket.close();
     }, [])
